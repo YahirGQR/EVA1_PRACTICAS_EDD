@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package eva1_11_ejemplo_arreglos;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author moviles
+ */
+public class EVA1_11_EJEMPLO_ARREGLOS {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese numero de grupos: 2");
+        int g = teclado.nextInt();
+         
+        // JOptionPane.showInputDialog(null, "Ingrese numero de grupos: ");
+        
+        int[][] calificaciones = new int[g][];
+        
+        for (int i = 0; i < calificaciones[g].length; i++) {
+            System.out.println(""); 
+            
+        }
+        /*calificaciones[] = new int[];
+        System.out.println("Ingrese numero de grupos:" + g); 
+        */
+        
+        // para cada grupo cuantos estudiantes van a capturar 
+        
+    }
+    
+}
