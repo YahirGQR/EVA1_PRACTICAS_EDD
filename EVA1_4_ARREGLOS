@@ -1,0 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package eva1.pkg4.arreglos;
+
+/**
+ *
+ * @author moviles
+ */
+public class EVA14ARREGLOS {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //TIPO DE DATO[] IDENTIFICADOR =new TIPO DE DATO (TAMAñO)
+        //FUNCIONES E IDENTIFICADORES EMPIEZAN EN MINUSCULA
+        //FUNCIONES INDICAN UNA ACCION -> VERBO
+        //CLASES EMPIEZAN EN MAYUSCULA
+        int[] arregloEdades, arregloSalario, arregloCali;
+        //Todos son arreglos
+        double arregloPromedio[], porcentaje;
+        //Solo arregloPromedio es arreglo
+        arregloEdades = new int[50];
+        //Tamaño maximo en un arreglo = 2100 millones(?)
+        System.out.println(arregloEdades);
+        for (int i = 0; i < arregloEdades.length; i++) {
+            arregloEdades[i] = (int)(Math.random() * 100); 
+            
+        }
+        for (int i = 0; i < arregloEdades.length; i++) {
+            System.out.println("[" + i + "]" + arregloEdades[i]);
+        }
+        ;
+        
+    }
+    
+}
