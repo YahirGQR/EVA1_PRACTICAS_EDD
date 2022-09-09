@@ -17,23 +17,42 @@ public class EVA1_16_EJERCICIO_ARREGLOS_5 {
     public static void main(String[] args) {
         
         int[] arreglo = new int[50];
+        int contPar = 0;
         for (int i = 0; i < arreglo.length; i++) {
             arreglo[i] = (int)(Math.random() * 100) + 1;
+            if((arreglo[i]%2)==0){
+                // el numero par es
+                contPar++;
+            }
         }
         
+        System.out.println("Pares: " + contPar);
+        int[] arregloPar = new int[contPar];
+        // Guardamos valores en el arreglo pares
+        int posPares = 0;
+        for (int i = 0; i < arreglo.length; i++) {
+            if((arreglo[i]%2)==0){
+               arregloPar[posPares] = arreglo[i];
+               posPares++;
+            }
+        }
         imprimir(arreglo);
-        System.out.println("");
+        imprimir(arregloPar);
+        
+        /*System.out.println("");
         int[] pares = new int[arreglo.length];
         for (int i = 0; i < arreglo.length; i++) {
             if (arreglo[i]%2==0)
                 System.out.println(arreglo[i] + " ");
-        }
+        }*/
     }  
             
     public static void imprimir(int[] arreglo){
         for (int i = 0; i < arreglo.length; i++) {
             System.out.println("[" + arreglo[i] + "]");
         }
+        System.out.println("");
     } 
     
 }
+
