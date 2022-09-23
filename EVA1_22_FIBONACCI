@@ -16,7 +16,9 @@ public class EVA1_22_FIBONACCI2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println(calcularFibo(5));
+        for (int i = 5; i >= 0; i--) {
+            System.out.println(calcularFibo(i)); 
+        }
     }
     
     public static int calcularFibo(int pos){
@@ -29,4 +31,3 @@ public class EVA1_22_FIBONACCI2 {
     }
     
 }
-
