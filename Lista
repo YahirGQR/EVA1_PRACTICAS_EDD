@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package eva2_1_lista_simple;
+
+/**
+ *
+ * @author moviles
+ */
+public class Lista {
+    
+    private Nodo inicio;
+
+    // Por default, la lista esta vacía
+    public Lista(Nodo inicio) {
+        this.inicio = null; // No hay nodos en la lista
+        
+    }
+    
+    public void imprimir(){
+        
+        Nodo temp = inicio;
+            
+            // ¿Cómo muevo a temp?
+            while(temp.getSiguiente() != null){
+                System.out.print(temp.getValor() + " - ");
+                temp = temp.getSiguiente();
+            }
+    }
+    
+    // Agregar un nodo al final de la lista
+    public void agregar(int valor){
+        Nodo nuevoNodo = new Nodo(valor);
+        
+        // Verificar si hay nodos en la lista
+        if(inicio == null){ // No hay nodos en la lista
+            inicio = nuevoNodo;
+        }else{ // Hay nodos en la lista
+            
+            /* Hay que movernos por la lista usando un nodo temporal hasta el
+            ultimo nodo de la lista*/
+            Nodo temp = inicio;
+            
+            // ¿Cómo muevo a temp?
+            while(temp.getSiguiente() != null){
+                temp = temp.getSiguiente();
+            }
+            
+            temp.setSiguiente(nuevoNodo);
+            
+        }
+        
+    }  
+    
+}
