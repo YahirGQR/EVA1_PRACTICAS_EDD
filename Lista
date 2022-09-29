@@ -12,10 +12,12 @@ package eva2_1_lista_simple;
 public class Lista {
     
     private Nodo inicio;
+    private Nodo fin;
 
     // Por default, la lista esta vacía
-    public Lista(Nodo inicio) {
+    public Lista() {
         this.inicio = null; // No hay nodos en la lista
+        this.fin = null;
         
     }
     
@@ -23,35 +25,59 @@ public class Lista {
         
         Nodo temp = inicio;
             
-            // ¿Cómo muevo a temp?
-            while(temp.getSiguiente() != null){
-                System.out.print(temp.getValor() + " - ");
-                temp = temp.getSiguiente();
-            }
+        // ¿Cómo muevo a temp?
+        while(temp != null){
+            System.out.print(temp.getValor() + " - ");
+            temp = temp.getSiguiente();
+        }
     }
     
     // Agregar un nodo al final de la lista
+    // Solución 1: O(N)
     public void agregar(int valor){
         Nodo nuevoNodo = new Nodo(valor);
         
         // Verificar si hay nodos en la lista
         if(inicio == null){ // No hay nodos en la lista
             inicio = nuevoNodo;
+            fin = nuevoNodo;
         }else{ // Hay nodos en la lista
             
             /* Hay que movernos por la lista usando un nodo temporal hasta el
             ultimo nodo de la lista*/
-            Nodo temp = inicio;
+            /*Nodo temp = inicio;
             
             // ¿Cómo muevo a temp?
             while(temp.getSiguiente() != null){
                 temp = temp.getSiguiente();
             }
             
-            temp.setSiguiente(nuevoNodo);
+            temp.setSiguiente(nuevoNodo);*/
             
+            fin.setSiguiente(nuevoNodo);
+            fin = nuevoNodo;
         }
         
     }  
+    public int tamaLista(){
+        int cont = 0;
+        Nodo temp = inicio;
+            
+        // ¿Cómo muevo a temp?
+        while(temp != null){
+            cont++;
+            temp = temp.getSiguiente();
+        }
+        return cont;
+    }
+    
+    public void agregarEn(int valor, int pos){ 
+        // ¿Qué debemos validar?
+        // insertar en una posición no válida 
+        // posiciones negativas 
+        // posiciones mayores a la cantidad de elementos
+        
+        
+    }
     
 }
