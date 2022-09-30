@@ -23,13 +23,12 @@ public class EVA2_1_LISTA_SIMPLE {
        miLista.agregar(40); // 3 <------ inserción
        miLista.agregar(50); // 4
        miLista.agregar(60); // 5
+       miLista.imprimir();
        try{
-          miLista.insertarEn(70, 0); 
+          miLista.insertarEn(70, 3); 
        }catch(Exception ex){
            ex.printStackTrace();
        }
-       
-       miLista.imprimir();
        
         // int[] arreglo = new int[1000000];
        
