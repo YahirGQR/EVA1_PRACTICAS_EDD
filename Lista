@@ -30,6 +30,7 @@ public class Lista {
             System.out.print(temp.getValor() + " - ");
             temp = temp.getSiguiente();
         }
+        System.out.println("");
     }
     
     // Agregar un nodo al final de la lista
@@ -87,10 +88,12 @@ public class Lista {
                 inicio = nuevoNodo;
             }else{
                 Nodo temp = inicio;
-                
-                while(temp.getSiguiente() != null){
-                temp = temp.getSiguiente();
+                int cont = 0;
+                while(cont < (pos - 1)){
+                    temp = temp.getSiguiente();
+                    cont++;
             } 
+                System.out.println(temp.getValor() + " - ");
             }
             
         }
